@@ -19,18 +19,19 @@
                         <h3 class="text-center">Login Form</h3>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form action= "{{url('/')}}/register" method="post">
+                            @csrf 
                             <div class="mb-3">
                                 <label for="username" class="form-label">Username</label>
-                                <input type="text" class="form-control" id="username" placeholder="Enter your username">
+                                <input type="text" name = "username" class="form-control" id="username" placeholder="Enter your username">
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                                <input type="password" name="password" class="form-control" id="password" placeholder="Enter your password">
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email">
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
