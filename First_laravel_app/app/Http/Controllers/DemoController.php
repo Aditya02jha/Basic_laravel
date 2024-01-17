@@ -10,4 +10,8 @@ class DemoController extends Controller
     public function index(){
         return view("hello");
     }
+
+    public function hello(){
+        return view("welcome");
+    }
 }

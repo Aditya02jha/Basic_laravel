@@ -1,7 +1,10 @@
 <?php
 
 use App\Http\Controllers\DemoController;
+use App\Http\Controllers\ResourceController;
+use App\Http\Controllers\SingleActionController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 Route ::get("/" , [DemoController::class , "index"]);
 
-Route::get('/hello',function(){
-    return view('hello');
-});
+Route ::get ("/hello", "App\Http\Controllers\DemoController@hello");
+
+Route ::get ("/singleAction" , SingleActionController::class);
+
+Route ::resource("/register" , ResourceController::class);
